@@ -27,27 +27,28 @@
         </Rectangle>
 
         <Button Content="Добавить" x:Name="StartChart" Click="Button_Click" Margin="149,59,84,48" Grid.Column="3" Grid.Row="1"/>
-        <TextBox x:Name="NormalizedTemperature" HorizontalAlignment="Left" Height="35" Margin="45,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2"/>
+        <TextBox x:Name="NormalizedTemperature" HorizontalAlignment="Left" Height="35" Margin="45,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2" TextChanged="NormalizedTemperature_TextChanged" />
         <TextBlock HorizontalAlignment="Left" Margin="3,72,0,0" TextWrapping="Wrap" Text="Нормируемая температура" VerticalAlignment="Top" Height="35" Width="218" Grid.Column="3"/>
-        <TextBox x:Name="DesignTemperature" HorizontalAlignment="Left" Height="35" Margin="45,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2"/>
+        <TextBox x:Name="DesignTemperature" HorizontalAlignment="Left" Height="35" Margin="45,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2" TextChanged="DesignTemperature_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="3,112,0,0" TextWrapping="Wrap" Text="Расчетная температура" VerticalAlignment="Top" Height="35" Width="218" Grid.Column="3"/>
-        <TextBox x:Name="ThermalConductivity1" HorizontalAlignment="Left" Height="35" Margin="45,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2"/>
+        <TextBox x:Name="ThermalConductivity1" HorizontalAlignment="Left" Height="35" Margin="45,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2" TextChanged="ThermalConductivity1_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="3,152,0,0" TextWrapping="Wrap" Text="Коэф. теплопроводности (1)" VerticalAlignment="Top" Height="35" Width="218" Grid.Column="3"/>
-        <TextBox x:Name="ThermalConductivity2" HorizontalAlignment="Left" Height="35" Margin="45,192,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2"/>
+        <TextBox x:Name="ThermalConductivity2" HorizontalAlignment="Left" Height="35" Margin="45,192,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2" TextChanged="ThermalConductivity2_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="3,192,0,0" TextWrapping="Wrap" Text="Коэф. теплопроводности (2)" VerticalAlignment="Top" Height="35" Width="218" Grid.Column="3"/>
-        <TextBox x:Name="LayerThickness1" HorizontalAlignment="Left" Height="35" Margin="45,232,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2"/>
+        <TextBox x:Name="LayerThickness1" HorizontalAlignment="Left" Height="35" Margin="45,232,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2" TextChanged="LayerThickness1_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="3,232,0,0" TextWrapping="Wrap" Text="Толщина 1 слоя" VerticalAlignment="Top" Height="35" Width="218" Grid.Column="3"/>
-        <TextBox x:Name="LayerThickness2" HorizontalAlignment="Left" Height="35" Margin="45,272,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2"/>
+        <TextBox x:Name="LayerThickness2" HorizontalAlignment="Left" Height="35" Margin="45,272,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2" TextChanged="LayerThickness2_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="3,272,0,0" TextWrapping="Wrap" Text="Толщина 2 слоя" VerticalAlignment="Top" Height="35" Width="218" Grid.Column="3"/>
-        <TextBox x:Name="TransmissionResistance" HorizontalAlignment="Left" Height="35" Margin="45,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" TextChanged="TextBox_TextChanged" Grid.Column="2"/>
+        <TextBox x:Name="TransmissionResistance" HorizontalAlignment="Left" Height="35" Margin="45,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100"  Grid.Column="2" TextChanged="TransmissionResistance_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="3,312,0,0" TextWrapping="Wrap" Text="Сопротивление передаче" VerticalAlignment="Top" Height="35" Width="218" Grid.Column="3"/>
-        <TextBox x:Name="HeatTransferCoefficientInside" HorizontalAlignment="Left" Height="35" Margin="45,352,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2"/>
+        <TextBox x:Name="HeatTransferCoefficientInside" HorizontalAlignment="Left" Height="35" Margin="45,352,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2" TextChanged="HeatTransferCoefficientInside_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="3,352,0,0" TextWrapping="Wrap" Text="Коэф. теплоотдачи внутри" VerticalAlignment="Top" Height="35" Width="218" Grid.Column="3"/>
-        <TextBox x:Name="HeatTransferCoefficientOutside" HorizontalAlignment="Left" Height="35" Margin="45,392,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2"/>
+        <TextBox x:Name="HeatTransferCoefficientOutside" HorizontalAlignment="Left" Height="35" Margin="45,392,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2" TextChanged="HeatTransferCoefficientOutside_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="3,392,0,0" TextWrapping="Wrap" Text="Коэф. теплоотдачи внутри снаружи" VerticalAlignment="Top" Height="35" Width="218" Grid.Column="3"/>
-        <TextBox x:Name="ThermalResistance" HorizontalAlignment="Left" Height="35" Margin="45,432,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="ThermalResistance" HorizontalAlignment="Left" Height="35" Margin="45,432,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2" Grid.RowSpan="2" TextChanged="ThermalResistance_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="3,432,0,0" TextWrapping="Wrap" Text="Термическое сопротивление" VerticalAlignment="Top" Height="35" Width="218" Grid.Column="3" Grid.RowSpan="2"/>
-        <TextBox x:Name="ThermalResistanceClosedAirLayer" HorizontalAlignment="Left" Height="35" Margin="45,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" TextChanged="TextBox_TextChanged" Grid.Column="2" Grid.Row="1"/>
+        <TextBox x:Name="ThermalResistanceClosedAirLayer" HorizontalAlignment="Left" Height="35" Margin="45,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Grid.Column="2" Grid.Row="1" TextChanged="ThermalResistanceClosedAirLayer_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="3,10,0,0" TextWrapping="Wrap" Text="Термическое сопротивление замкнутой воздушной прослойки" VerticalAlignment="Top" Height="35" Width="218" Grid.Column="3" Grid.Row="1"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="61,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Background="#FFFFB4B4"/>
     </Grid>
 </Window>

@@ -3,6 +3,7 @@ using LiveCharts.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -14,75 +15,176 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
+
 namespace Мeasure
 {
-    /// <summary>
-    /// Логика взаимодействия для DataWindow1.xaml
-    /// </summary>
     public partial class DataWindow1 : Window
     {
-        // CartesianChart ch = new CartesianChart();
-
-        public event EventHandler ButtonClicked;// событие нажатия клавиши
-
         public DataWindow1()
         {
-            InitializeComponent();
-
-          /*  ch.Series = new SeriesCollection
-            {
-           new LineSeries
-             {
-              Title = "Series 1",
-              Values = new ChartValues<double> { 1, 1, 2, 3 ,5 }
-             }
-            };*/
-           
-
+           InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)//нажатие на кнопку
+        /// <summary>
+        /// Создаем переменные 
+        /// </summary>
+        public double NT;
+        public void NormalizedTemperature_TextChanged(object sender, TextChangedEventArgs e)
         {
-            string a = NormalizedTemperature.Text;
-            int NT = Convert.ToInt32(a);
-
-            string b = DesignTemperature.Text;
-            int DT = Convert.ToInt32(b);
-
-            string c = ThermalConductivity1.Text;
-            int TC1 = Convert.ToInt32(c);
-
-            string d = ThermalConductivity2.Text;
-            int TC2 = Convert.ToInt32(d);
-
-            string f = LayerThickness1.Text;
-            int LT1 = Convert.ToInt32(f);
-
-            string g = LayerThickness2.Text;
-            int LT2 = Convert.ToInt32(g);
-
-            string h = TransmissionResistance.Text;
-            int TrR = Convert.ToInt32(h);
-
-            string j = HeatTransferCoefficientInside.Text;
-            int HTCI = Convert.ToInt32(j);
-
-            string k = HeatTransferCoefficientOutside.Text;
-            int HTCO = Convert.ToInt32(k);
-
-            string l = ThermalResistance.Text;
-            int ThR = Convert.ToInt32(l);
-
-            string m = ThermalResistanceClosedAirLayer.Text;
-            int TRCAL = Convert.ToInt32(m);
-
-            this.Close();
-
-            /*if (ButtonClicked != null)
+            
+            if (double.TryParse(NormalizedTemperature.Text, out NT) || string.IsNullOrEmpty(NormalizedTemperature.Text))
             {
-                this.Close();
-                ButtonClicked(this, EventArgs.Empty);//наверное вызываем ивент, но хз
-            }*/
+                string a = NormalizedTemperature.Text;
+                NormalizedTemperature.Background = Brushes.White;
+                double NT = Convert.ToDouble(a);
+            }
+            else
+            {
+                NormalizedTemperature.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+            }
+        }
+
+        private void DesignTemperature_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            double DT;
+            if (double.TryParse(DesignTemperature.Text, out DT) || string.IsNullOrEmpty(DesignTemperature.Text))
+            {
+                DesignTemperature.Background = Brushes.White;
+                
+                
+            }
+            else
+            {
+                DesignTemperature.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+            }
+        }
+
+        private void ThermalConductivity1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            double TC1;
+            if (double.TryParse(ThermalConductivity1.Text, out TC1) || string.IsNullOrEmpty(ThermalConductivity1.Text))
+            {
+                ThermalConductivity1.Background = Brushes.White;
+            }
+            else
+            {
+                ThermalConductivity1.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+            }
+        }
+
+        private void ThermalConductivity2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            double TC2;
+            if (double.TryParse(ThermalConductivity2.Text, out TC2) || string.IsNullOrEmpty(ThermalConductivity2.Text))
+            {
+                ThermalConductivity2.Background = Brushes.White;
+            }
+            else
+            {
+                ThermalConductivity2.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+            }
+        }
+
+        private void LayerThickness1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            double LT1;
+            if (double.TryParse(LayerThickness1.Text, out LT1) || string.IsNullOrEmpty(LayerThickness1.Text))
+            {
+                LayerThickness1.Background = Brushes.White;
+            }
+            else
+            {
+                LayerThickness1.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+            }
+        }
+
+        private void LayerThickness2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            double LT2;
+            if (double.TryParse(LayerThickness2.Text, out LT2) || string.IsNullOrEmpty(LayerThickness2.Text))
+            {
+                LayerThickness2.Background = Brushes.White;
+            }
+            else
+            {
+                LayerThickness2.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+            }
+        }
+
+        private void TransmissionResistance_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            double TrR;
+            if (double.TryParse(TransmissionResistance.Text, out TrR) || string.IsNullOrEmpty(TransmissionResistance.Text))
+            {
+                TransmissionResistance.Background = Brushes.White;
+            }
+            else
+            {
+                TransmissionResistance.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+            }
+        }
+
+        private void HeatTransferCoefficientInside_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            double HTCI;
+            if (double.TryParse(HeatTransferCoefficientInside.Text, out HTCI) || string.IsNullOrEmpty(HeatTransferCoefficientInside.Text))
+            {
+                HeatTransferCoefficientInside.Background = Brushes.White;
+            }
+            else
+            {
+                HeatTransferCoefficientInside.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+            }
+        }
+
+        private void HeatTransferCoefficientOutside_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            double HTCO;
+            if (double.TryParse(HeatTransferCoefficientOutside.Text, out HTCO) || string.IsNullOrEmpty(HeatTransferCoefficientOutside.Text))
+            {
+                HeatTransferCoefficientOutside.Background = Brushes.White;
+            }
+            else
+            {
+                HeatTransferCoefficientOutside.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+            }
+        }
+
+        public void ThermalResistance_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            double ThR;
+            if (double.TryParse(ThermalResistance.Text, out ThR) || string.IsNullOrEmpty(ThermalResistance.Text))
+            {
+                ThermalResistance.Background = Brushes.White;
+            }
+            else
+            {
+                ThermalResistance.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+            }
+           // MessageBox.Show("HELLO", ThR);
+        }
+
+        private void ThermalResistanceClosedAirLayer_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            double TRCAL;
+            if (double.TryParse(ThermalResistanceClosedAirLayer.Text, out TRCAL) || string.IsNullOrEmpty(ThermalResistanceClosedAirLayer.Text))
+            {
+                ThermalResistanceClosedAirLayer.Background = Brushes.White;
+            }
+            else
+            {
+                ThermalResistanceClosedAirLayer.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+            }
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DataWindow1 datawindow1 = new DataWindow1();
+            MessageBox.Show(datawindow1.NormalizedTemperature.Text);
         }
     }
+   
 }

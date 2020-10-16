@@ -31,7 +31,7 @@
             </Rectangle>
 
             <TextBox Tag=" ВВедите текст" HorizontalAlignment="Left" Height="38" Margin="456,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155"/>
-            <TextBox HorizontalAlignment="Left" Height="38" Margin="456,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155"/>
+            <TextBox HorizontalAlignment="Left" Height="38" Margin="456,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155" />
             <TextBox HorizontalAlignment="Left" Height="38" Margin="667,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155"/>
             <TextBox HorizontalAlignment="Left" Height="38" Margin="667,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155"/>
             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="коэффициент теплоотдачи наружной поверхности:" VerticalAlignment="Top" Margin="667,166,0,0" Width="174" Height="37" FontSize="14"/>

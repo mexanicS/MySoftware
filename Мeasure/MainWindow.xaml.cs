@@ -73,13 +73,15 @@ namespace Мeasure
            //dataWindow1.Show();
         }
 
-       /* private void DataButton_ButtonClicked(object sender, EventArgs e)// ивент, функция нажатия кнопки из DataWindow
-        {
-            Button_Click1 = true;
-            MessageBox.Show("ButtonClicked");
-        }
-        */
         
+
+        /* private void DataButton_ButtonClicked(object sender, EventArgs e)// ивент, функция нажатия кнопки из DataWindow
+         {
+             Button_Click1 = true;
+             MessageBox.Show("ButtonClicked");
+         }
+         */
+
 
 
     }

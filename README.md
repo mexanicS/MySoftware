@@ -1,9 +1,9 @@
-# Measure
+# Основное
 Сalculation of the thickness of the insulation layer for the outer enclosing structure
 Привет, это НАВЭЛЬНЫЙ, этот файл редми предназначен для отслеживания и описания проекта для ученых.
 
-Описание переменных
--
+# Описание переменных
+
 На данный момент используются везде типы double. 
 NT    = 'NormalizedTemperature'            = Нормируемая температура
 DT    = 'DesignTemperature'                = Расчетная температура

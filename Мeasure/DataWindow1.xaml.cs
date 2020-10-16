@@ -25,45 +25,50 @@ namespace Мeasure
         {
            InitializeComponent();
         }
-
         /// <summary>
         /// Создаем переменные 
         /// </summary>
-        public double NT;
+        public double NT,DT, TC1, TC2, LT1, LT2, TrR, HTCI, HTCO, ThR, TRCAL;
         public void NormalizedTemperature_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
+            if (NormalizedTemperature.Text.Length > 0)
+            {
+                AddLayer.IsEnabled = true;
+            }
             if (double.TryParse(NormalizedTemperature.Text, out NT) || string.IsNullOrEmpty(NormalizedTemperature.Text))
             {
-                string a = NormalizedTemperature.Text;
                 NormalizedTemperature.Background = Brushes.White;
-                double NT = Convert.ToDouble(a);
             }
             else
             {
                 NormalizedTemperature.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+                AddLayer.IsEnabled = false;
             }
         }
 
-        private void DesignTemperature_TextChanged(object sender, TextChangedEventArgs e)
+        public void DesignTemperature_TextChanged(object sender, TextChangedEventArgs e)
         {
-
-            double DT;
+            if (NormalizedTemperature.Text.Length > 0)
+            {
+                AddLayer.IsEnabled = true;
+            }
             if (double.TryParse(DesignTemperature.Text, out DT) || string.IsNullOrEmpty(DesignTemperature.Text))
             {
                 DesignTemperature.Background = Brushes.White;
-                
-                
             }
             else
             {
                 DesignTemperature.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+                AddLayer.IsEnabled = false;
             }
         }
 
-        private void ThermalConductivity1_TextChanged(object sender, TextChangedEventArgs e)
+        public void ThermalConductivity1_TextChanged(object sender, TextChangedEventArgs e)
         {
-            double TC1;
+            if (NormalizedTemperature.Text.Length > 0)
+            {
+                AddLayer.IsEnabled = true;
+            }
             if (double.TryParse(ThermalConductivity1.Text, out TC1) || string.IsNullOrEmpty(ThermalConductivity1.Text))
             {
                 ThermalConductivity1.Background = Brushes.White;
@@ -71,12 +76,16 @@ namespace Мeasure
             else
             {
                 ThermalConductivity1.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+                AddLayer.IsEnabled = false;
             }
         }
 
-        private void ThermalConductivity2_TextChanged(object sender, TextChangedEventArgs e)
+        public void ThermalConductivity2_TextChanged(object sender, TextChangedEventArgs e)
         {
-            double TC2;
+            if (NormalizedTemperature.Text.Length > 0)
+            {
+                AddLayer.IsEnabled = true;
+            }
             if (double.TryParse(ThermalConductivity2.Text, out TC2) || string.IsNullOrEmpty(ThermalConductivity2.Text))
             {
                 ThermalConductivity2.Background = Brushes.White;
@@ -84,12 +93,16 @@ namespace Мeasure
             else
             {
                 ThermalConductivity2.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+                AddLayer.IsEnabled = false;
             }
         }
 
-        private void LayerThickness1_TextChanged(object sender, TextChangedEventArgs e)
+        public void LayerThickness1_TextChanged(object sender, TextChangedEventArgs e)
         {
-            double LT1;
+            if (NormalizedTemperature.Text.Length > 0)
+            {
+                AddLayer.IsEnabled = true;
+            }
             if (double.TryParse(LayerThickness1.Text, out LT1) || string.IsNullOrEmpty(LayerThickness1.Text))
             {
                 LayerThickness1.Background = Brushes.White;
@@ -97,12 +110,16 @@ namespace Мeasure
             else
             {
                 LayerThickness1.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+                AddLayer.IsEnabled = false;
             }
         }
 
-        private void LayerThickness2_TextChanged(object sender, TextChangedEventArgs e)
+        public void LayerThickness2_TextChanged(object sender, TextChangedEventArgs e)
         {
-            double LT2;
+            if (NormalizedTemperature.Text.Length > 0)
+            {
+                AddLayer.IsEnabled = true;
+            }
             if (double.TryParse(LayerThickness2.Text, out LT2) || string.IsNullOrEmpty(LayerThickness2.Text))
             {
                 LayerThickness2.Background = Brushes.White;
@@ -110,12 +127,16 @@ namespace Мeasure
             else
             {
                 LayerThickness2.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+                AddLayer.IsEnabled = false;
             }
         }
 
-        private void TransmissionResistance_TextChanged(object sender, TextChangedEventArgs e)
+        public void TransmissionResistance_TextChanged(object sender, TextChangedEventArgs e)
         {
-            double TrR;
+            if (NormalizedTemperature.Text.Length > 0)
+            {
+                AddLayer.IsEnabled = true;
+            }
             if (double.TryParse(TransmissionResistance.Text, out TrR) || string.IsNullOrEmpty(TransmissionResistance.Text))
             {
                 TransmissionResistance.Background = Brushes.White;
@@ -123,12 +144,16 @@ namespace Мeasure
             else
             {
                 TransmissionResistance.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+                AddLayer.IsEnabled = false;
             }
         }
 
-        private void HeatTransferCoefficientInside_TextChanged(object sender, TextChangedEventArgs e)
+        public void HeatTransferCoefficientInside_TextChanged(object sender, TextChangedEventArgs e)
         {
-            double HTCI;
+            if (NormalizedTemperature.Text.Length > 0)
+            {
+                AddLayer.IsEnabled = true;
+            }
             if (double.TryParse(HeatTransferCoefficientInside.Text, out HTCI) || string.IsNullOrEmpty(HeatTransferCoefficientInside.Text))
             {
                 HeatTransferCoefficientInside.Background = Brushes.White;
@@ -136,12 +161,16 @@ namespace Мeasure
             else
             {
                 HeatTransferCoefficientInside.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+                AddLayer.IsEnabled = false;
             }
         }
 
-        private void HeatTransferCoefficientOutside_TextChanged(object sender, TextChangedEventArgs e)
+        public void HeatTransferCoefficientOutside_TextChanged(object sender, TextChangedEventArgs e)
         {
-            double HTCO;
+            if (NormalizedTemperature.Text.Length > 0)
+            {
+                AddLayer.IsEnabled = true;
+            }
             if (double.TryParse(HeatTransferCoefficientOutside.Text, out HTCO) || string.IsNullOrEmpty(HeatTransferCoefficientOutside.Text))
             {
                 HeatTransferCoefficientOutside.Background = Brushes.White;
@@ -149,12 +178,16 @@ namespace Мeasure
             else
             {
                 HeatTransferCoefficientOutside.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+                AddLayer.IsEnabled = false;
             }
         }
 
         public void ThermalResistance_TextChanged(object sender, TextChangedEventArgs e)
         {
-            double ThR;
+            if (NormalizedTemperature.Text.Length > 0)
+            {
+                AddLayer.IsEnabled = true;
+            }
             if (double.TryParse(ThermalResistance.Text, out ThR) || string.IsNullOrEmpty(ThermalResistance.Text))
             {
                 ThermalResistance.Background = Brushes.White;
@@ -162,13 +195,17 @@ namespace Мeasure
             else
             {
                 ThermalResistance.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+                AddLayer.IsEnabled = false;
             }
            // MessageBox.Show("HELLO", ThR);
         }
 
-        private void ThermalResistanceClosedAirLayer_TextChanged(object sender, TextChangedEventArgs e)
+        public void ThermalResistanceClosedAirLayer_TextChanged(object sender, TextChangedEventArgs e)
         {
-            double TRCAL;
+            if (NormalizedTemperature.Text.Length > 0)
+            {
+                AddLayer.IsEnabled = true;
+            }
             if (double.TryParse(ThermalResistanceClosedAirLayer.Text, out TRCAL) || string.IsNullOrEmpty(ThermalResistanceClosedAirLayer.Text))
             {
                 ThermalResistanceClosedAirLayer.Background = Brushes.White;
@@ -176,15 +213,15 @@ namespace Мeasure
             else
             {
                 ThermalResistanceClosedAirLayer.Background = new SolidColorBrush(Color.FromArgb(100, 250, 182, 182));
+                AddLayer.IsEnabled = false;
             }
             
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DataWindow1 datawindow1 = new DataWindow1();
-            MessageBox.Show(datawindow1.NormalizedTemperature.Text);
-        }
+            this.Close();
+;       }
     }
    
 }

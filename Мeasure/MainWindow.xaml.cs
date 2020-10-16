@@ -57,7 +57,7 @@ namespace Мeasure
 
             DataContext = this;
 
-            CartesianChart ch = new CartesianChart();//    зачем? кто знает, уже не помню, нужно разбираться..  
+           // CartesianChart ch = new CartesianChart();//    зачем? кто знает, уже не помню, нужно разбираться..  
         }
 
        
@@ -73,7 +73,12 @@ namespace Мeasure
            //dataWindow1.Show();
         }
 
-        
+        private void MakeButton_MouseEnter(object sender, MouseEventArgs e)
+        {
+
+        }
+
+
 
         /* private void DataButton_ButtonClicked(object sender, EventArgs e)// ивент, функция нажатия кнопки из DataWindow
          {

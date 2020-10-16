@@ -48,7 +48,7 @@ namespace Мeasure
 
         public void DesignTemperature_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (NormalizedTemperature.Text.Length > 0)
+            if (DesignTemperature.Text.Length > 0)
             {
                 AddLayer.IsEnabled = true;
             }
@@ -65,7 +65,7 @@ namespace Мeasure
 
         public void ThermalConductivity1_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (NormalizedTemperature.Text.Length > 0)
+            if (ThermalConductivity1.Text.Length > 0)
             {
                 AddLayer.IsEnabled = true;
             }
@@ -82,7 +82,7 @@ namespace Мeasure
 
         public void ThermalConductivity2_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (NormalizedTemperature.Text.Length > 0)
+            if (ThermalConductivity2.Text.Length > 0)
             {
                 AddLayer.IsEnabled = true;
             }
@@ -99,7 +99,7 @@ namespace Мeasure
 
         public void LayerThickness1_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (NormalizedTemperature.Text.Length > 0)
+            if (LayerThickness1.Text.Length > 0)
             {
                 AddLayer.IsEnabled = true;
             }
@@ -116,7 +116,7 @@ namespace Мeasure
 
         public void LayerThickness2_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (NormalizedTemperature.Text.Length > 0)
+            if (LayerThickness2.Text.Length > 0)
             {
                 AddLayer.IsEnabled = true;
             }
@@ -133,7 +133,7 @@ namespace Мeasure
 
         public void TransmissionResistance_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (NormalizedTemperature.Text.Length > 0)
+            if (TransmissionResistance.Text.Length > 0)
             {
                 AddLayer.IsEnabled = true;
             }
@@ -150,7 +150,7 @@ namespace Мeasure
 
         public void HeatTransferCoefficientInside_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (NormalizedTemperature.Text.Length > 0)
+            if (HeatTransferCoefficientInside.Text.Length > 0)
             {
                 AddLayer.IsEnabled = true;
             }
@@ -167,7 +167,7 @@ namespace Мeasure
 
         public void HeatTransferCoefficientOutside_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (NormalizedTemperature.Text.Length > 0)
+            if (HeatTransferCoefficientOutside.Text.Length > 0)
             {
                 AddLayer.IsEnabled = true;
             }
@@ -184,7 +184,7 @@ namespace Мeasure
 
         public void ThermalResistance_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (NormalizedTemperature.Text.Length > 0)
+            if (ThermalResistance.Text.Length > 0)
             {
                 AddLayer.IsEnabled = true;
             }
@@ -202,7 +202,7 @@ namespace Мeasure
 
         public void ThermalResistanceClosedAirLayer_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (NormalizedTemperature.Text.Length > 0)
+            if (ThermalResistanceClosedAirLayer.Text.Length > 0)
             {
                 AddLayer.IsEnabled = true;
             }

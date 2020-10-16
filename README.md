@@ -1,5 +1,6 @@
 # Основное
-Сalculation of the thickness of the insulation layer for the outer enclosing structure
+Сalculation of the thickness of the insulation layer for the outer enclosing structure.
+
 Привет, это StepONE (Mexanic) и fantom3527, этот файл редми предназначен для отслеживания и описания проекта для ученых.
 
 # Описание переменных

@@ -1,6 +1,7 @@
 # Measure
 Сalculation of the thickness of the insulation layer for the outer enclosing structure
 Привет, это НАВЭЛЬНЫЙ, этот файл редми предназначен для отслеживания и описания проекта для ученых.
+
 Описание переменных
 -
 На данный момент используются везде типы double. 
@@ -15,4 +16,3 @@ HTCI  = 'HeatTransferCoefficientInside'    = Коэффициент теплоо
 HTCO  = 'HeatTransferCoefficientOutside'   = Коэффициент теплоотдачи внутри снаружи
 ThR   = 'ThermalResistance'                = Термическое сопротивление
 TRCAL = 'ThermalResistanceClosedAirLayer'  = Термическое сопротивление замкнутой воздушной прослойки
-c

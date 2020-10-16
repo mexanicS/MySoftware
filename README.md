@@ -15,3 +15,4 @@ HTCI  = 'HeatTransferCoefficientInside'    = Коэффициент теплоо
 HTCO  = 'HeatTransferCoefficientOutside'   = Коэффициент теплоотдачи внутри снаружи
 ThR   = 'ThermalResistance'                = Термическое сопротивление
 TRCAL = 'ThermalResistanceClosedAirLayer'  = Термическое сопротивление замкнутой воздушной прослойки
+c
